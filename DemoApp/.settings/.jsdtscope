@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="app/EditProfileFiles/Finished"/>
+	<classpathentry kind="src" path="app/EditProfileFiles/Original"/>
+	<classpathentry excluding="services/|controllers/" kind="src" path="app/js"/>
+	<classpathentry kind="src" path="app/js/controllers"/>
+	<classpathentry kind="src" path="app/js/services"/>
+	<classpathentry excluding="angular/" kind="src" path="app/lib"/>
+	<classpathentry kind="src" path="app/lib/angular"/>
+	<classpathentry kind="src" path="scripts"/>
+	<classpathentry excluding="lib/|unit/|e2e/" kind="src" path="test"/>
+	<classpathentry kind="src" path="test/e2e"/>
+	<classpathentry kind="src" path="test/lib"/>
+	<classpathentry kind="src" path="test/unit"/>
+	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path=""/>
+</classpath>
