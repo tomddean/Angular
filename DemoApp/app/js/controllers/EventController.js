@@ -46,6 +46,4 @@ eventsApp.controller('EventController', function EventController($scope) {
     $scope.downVoteSession = function(session) {
         session.upVoteCount--;
     }
-
-    $scope.buttonDisabled = false;
 });
