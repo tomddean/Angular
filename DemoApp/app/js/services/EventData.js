@@ -1,40 +1,17 @@
-eventsApp.factory('eventData', function () {
+eventsApp.factory('eventData', function ($http, $q) {
     return {
-        event: {
-            name: 'Angular Boot Camp',
-            date: '1/1/2013',
-            time: '10:30 am',
-            location: {
-                address: "Google Headquarters",
-                city: "Mountain View",
-                province: "CA"
-            },
-            sessions: [
-                {
-                    name: 'Directives Masterclass',
-                    creatorName: 'Bob Smith',
-                    duration: '1 hour',
-                    level: 'Advanced',
-                    abstract: 'In this session you will learn stuff...',
-                    upVoteCount: 0
-                },
-                {
-                    name: 'Scopes for fun and profit',
-                    creatorName: 'John Doe',
-                    duration: '30 mins',
-                    level: 'Introductory',
-                    abstract: 'This session will take a closer look at scopes.',
-                    upVoteCount: 0
-                },
-                {
-                    name: 'Well Behaved Controllers',
-                    creatorName: 'Jane Doe',
-                    duration: '2 hours',
-                    level: 'Intermediate',
-                    abstract: 'Controllers are the beginning of everything Angular does!',
-                    upVoteCount: 0
-                }
-            ]
+        getEvent: function () {
+            var deferred = $q.defer();
+
+            $http({method: 'GET', url: '/data/event/2'}).
+                success(function (data, status, headers, config) {
+                    deferred.resolve(data);
+                }).
+                error(function (data, status, headers, config) {
+                    deferred.reject(status);
+                });
+
+            return deferred.promise;
         }
     };
 });
