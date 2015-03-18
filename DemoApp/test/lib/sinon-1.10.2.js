@@ -4534,8 +4534,7 @@ if (typeof module !== "undefined" && module.exports && typeof require == "functi
             }
 
             return result;
-        };
-
+        }
         if (callback.length) {
             return function sinonAsyncSandboxedTest(callback) {
                 return sinonSandboxedTest.apply(this, arguments);
@@ -4824,7 +4823,7 @@ if (typeof module !== "undefined" && module.exports && typeof require == "functi
                     "expected value to match",
                     "    expected = " + sinon.format(expectation),
                     "    actual = " + sinon.format(actual)
-                ]
+                ];
                 failAssertion(this, formatted.join("\n"));
             }
         }

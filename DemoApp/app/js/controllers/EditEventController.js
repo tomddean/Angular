@@ -10,7 +10,7 @@ eventsApp.controller('EditEventController',
                     function(response) { console.log('failure', response)}
                 )
             }
-        }
+        };
 
         $scope.cancelEdit = function () {
             window.location = "/EventDetails.html";

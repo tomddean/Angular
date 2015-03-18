@@ -1,8 +1,8 @@
 'use strict';
 
-eventsApp.controller('EventController', function EventController($scope, eventData) {
+eventsApp.controller('EventController', function EventController($scope, eventData, $routeParams) {
     $scope.sortorder = 'name';
-    eventData.getEvent()
+    eventData.getEvent($routeParams.eventId)
         .$promise.then(
         function (event) {
             $scope.event = event;
@@ -15,11 +15,11 @@ eventsApp.controller('EventController', function EventController($scope, eventDa
 
     $scope.upVoteSession = function (session) {
         session.upVoteCount++;
-    }
+    };
 
     $scope.downVoteSession = function (session) {
         session.upVoteCount--;
-    }
+    };
 
     $scope.getGravatarImage = function (email) {
         if (email !== undefined) {

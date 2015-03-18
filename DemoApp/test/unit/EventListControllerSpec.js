@@ -20,4 +20,4 @@ describe('EventListController', function() {
 
     expect(scope.events).toBe(mockEvents);
   })
-})
+});
